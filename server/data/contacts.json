@@ -1,0 +1,54 @@
+[
+  {
+    "id": "c1",
+    "nombre": "Lic. Carlos Mendoza",
+    "telefono": "+1 (809) 555-0142",
+    "email": "carlos.mendoza@itla.edu.do",
+    "categoria": "Trabajo",
+    "empresa": "Tech Solutions RD",
+    "cargo": "Director de Operaciones",
+    "favorito": true,
+    "notas": "Coordinador de pasantías y convenios.",
+    "avatarColor": "#0ea5e9",
+    "creadoEn": "2026-10-20T10:15:00.000Z"
+  },
+  {
+    "id": "c2",
+    "nombre": "Ana Lucía Tavárez",
+    "telefono": "+1 (829) 420-9988",
+    "email": "ana.tavarez@studios.design",
+    "categoria": "Personal",
+    "empresa": "Freelance",
+    "cargo": "UI/UX Designer",
+    "favorito": true,
+    "notas": "Colaboradora en proyectos de diseño y branding.",
+    "avatarColor": "#ec4899",
+    "creadoEn": "2026-10-22T14:30:00.000Z"
+  },
+  {
+    "id": "c3",
+    "nombre": "Ing. Miguel Ángel Rosario",
+    "telefono": "+1 (849) 301-7721",
+    "email": "miguel.rosario@cloudsys.io",
+    "categoria": "Universidad",
+    "empresa": "ITLA",
+    "cargo": "Docente Programación Web",
+    "favorito": false,
+    "notas": "Reunión de tutorías los jueves a las 4:00 PM.",
+    "avatarColor": "#10b981",
+    "creadoEn": "2026-10-23T09:00:00.000Z"
+  },
+  {
+    "id": "c4",
+    "nombre": "Dra. Patricia Peña",
+    "telefono": "+1 (809) 682-3344",
+    "email": "consultorio.pena@saludmed.com",
+    "categoria": "Servicios",
+    "empresa": "Centro Médico Moderno",
+    "cargo": "Odontóloga",
+    "favorito": false,
+    "notas": "Cita de control semestral.",
+    "avatarColor": "#8b5cf6",
+    "creadoEn": "2026-10-25T11:20:00.000Z"
+  }
+]

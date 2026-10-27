@@ -1,0 +1,33 @@
+{
+  "name": "tarea4-agenda-react-express",
+  "version": "1.0.0",
+  "description": "Tarea 4: Agenda React con Servicios Web Express - Programación Web",
+  "main": "server/server.js",
+  "scripts": {
+    "server": "nodemon server/server.js",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "node server/server.js",
+    "build": "npm run build --prefix client"
+  },
+  "keywords": [
+    "react",
+    "express",
+    "nodejs",
+    "agenda",
+    "itla",
+    "programacion-web"
+  ],
+  "author": "Estudiante ITLA",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.9"
+  }
+}
