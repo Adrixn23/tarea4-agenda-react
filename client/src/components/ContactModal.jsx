@@ -52,7 +52,6 @@ export default function ContactModal({ isOpen, onClose, onSave, contactToEdit })
       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }));
-    // Limpiar error del campo
     if (errores[name]) {
       setErrores(prev => ({ ...prev, [name]: null }));
     }

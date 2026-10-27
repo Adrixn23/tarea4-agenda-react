@@ -10,7 +10,6 @@ import {
 } from 'lucide-react';
 
 export default function ContactCard({ contacto, onEdit, onDelete, onToggleFav }) {
-  // Iniciales del contacto para el avatar
   const getIniciales = (nombre) => {
     if (!nombre) return '?';
     const partes = nombre.trim().split(' ');

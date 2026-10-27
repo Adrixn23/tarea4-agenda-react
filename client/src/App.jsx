@@ -5,12 +5,9 @@ import {
   Search, 
   Star, 
   Sparkles, 
-  BookOpen, 
   RefreshCw,
   Building,
-  GraduationCap,
-  Layers,
-  Heart
+  Layers
 } from 'lucide-react';
 import { contactoService } from './services/api';
 import ContactCard from './components/ContactCard';
@@ -55,7 +52,7 @@ export default function App() {
   useEffect(() => {
     contactoService.obtenerInfoTarea()
       .then(res => setInfoTarea(res))
-      .catch(() => console.log('Sin conexión inicial con metadata de Express'));
+      .catch(() => {});
   }, []);
 
   useEffect(() => {
@@ -112,14 +109,12 @@ export default function App() {
     }
   };
 
-  // Cálculos estadísticos para el dashboard
   const totalContactos = contactos.length;
   const totalFavoritos = contactos.filter(c => c.favorito).length;
   const totalLaborales = contactos.filter(c => c.categoria === 'Trabajo').length;
 
   return (
     <div className="app-container">
-      {/* Toast Notificaciones */}
       {toast && (
         <div className="toast-container">
           <div className={`toast ${toast.tipo}`}>
@@ -128,7 +123,6 @@ export default function App() {
         </div>
       )}
 
-      {/* Header & Identidad del Proyecto */}
       <header className="app-header">
         <div>
           <div className="brand-badge">
@@ -166,7 +160,6 @@ export default function App() {
         </div>
       </header>
 
-      {/* Tarjetas de Métricas Rápidas */}
       <section className="stats-grid">
         <div className="stat-card">
           <div className="stat-icon" style={{ background: 'rgba(99, 102, 241, 0.15)', color: '#818cf8' }}>
@@ -209,7 +202,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* Barra de Filtros y Búsqueda */}
       <section className="controls-bar">
         <div className="search-box">
           <Search size={18} className="search-icon" />
@@ -242,7 +234,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* Grid de Contactos */}
       {cargando ? (
         <div style={{ textAlign: 'center', padding: '3rem', color: '#94a3b8' }}>
           <RefreshCw className="animate-spin" size={28} style={{ margin: '0 auto 1rem' }} />
@@ -277,7 +268,6 @@ export default function App() {
         </div>
       )}
 
-      {/* Modal para Creación / Edición */}
       <ContactModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}

@@ -4,7 +4,6 @@ const crypto = require('crypto');
 
 const DATA_FILE = path.join(__dirname, '../data/contacts.json');
 
-// Utilidad para leer contactos desde el archivo
 function leerContactos() {
   try {
     if (!fs.existsSync(DATA_FILE)) {
@@ -14,17 +13,14 @@ function leerContactos() {
     const raw = fs.readFileSync(DATA_FILE, 'utf8');
     return JSON.parse(raw || '[]');
   } catch (error) {
-    console.error('Error al leer el archivo de contactos:', error);
     return [];
   }
 }
 
-// Utilidad para guardar contactos
 function guardarContactos(contactos) {
   fs.writeFileSync(DATA_FILE, JSON.stringify(contactos, null, 2), 'utf8');
 }
 
-// Paleta para avatares aleatorios elegantes
 const AVATAR_PALETTE = ['#0284c7', '#7c3aed', '#db2777', '#059669', '#d97706', '#dc2626', '#4f46e5'];
 
 exports.obtenerContactos = (req, res) => {
